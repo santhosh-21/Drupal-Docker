@@ -1,7 +1,7 @@
 FROM drupal:latest
 
 RUN apt-get update && \
-    apt-get install -y git curl && \
+    apt-get install -y git curl poppler-utils && \
     rm -rf /var/lib/apt/lists/*
 
 RUN docker-php-ext-install mysqli
